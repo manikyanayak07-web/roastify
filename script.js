@@ -1,11 +1,3 @@
-// Show splash for 2 seconds, then reveal app
-window.onload = function() {
-  setTimeout(() => {
-    document.getElementById("splash").style.display = "none";
-    document.getElementById("app").style.display = "block";
-  }, 2000); // 2000 ms = 2 seconds
-};
-
 function generateRoast() {
   const roasts = [
     "You're proof that even evolution takes breaks.",
@@ -14,6 +6,12 @@ function generateRoast() {
     "You're like a cloud. When you disappear, it’s a beautiful day."
   ];
   const randomRoast = roasts[Math.floor(Math.random() * roasts.length)];
-  document.getElementById("roast").innerText = randomRoast;
+  const roastElement = document.getElementById("roast");
+  roastElement.innerText = randomRoast;
+
+  // Random background color
+  const colors = ["#ff6a00", "#ee0979", "#00c9ff", "#92fe9d"];
+  document.body.style.background = `linear-gradient(135deg, ${colors[Math.floor(Math.random()*colors.length)]}, black)`;
 }
+
 
