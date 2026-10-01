@@ -2,13 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Roastify</title>
+  <title>Roastify 🔥</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to Roastify 🔥</h1>
-  <button onclick="generateRoast()">Get a Roast</button>
-  <p id="roast"></p>
+  <!-- Intro splash -->
+  <div id="splash">
+    <h2>Powered by BlaDez ⚡</h2>
+  </div>
+
+  <!-- Main app -->
+  <div class="container" id="app" style="display:none;">
+    <h1>🔥 Roastify 🔥</h1>
+    <p class="tagline">Click the button and get roasted!</p>
+    <button onclick="generateRoast()">Roast Me</button>
+    <p id="roast"></p>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+
